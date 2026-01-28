@@ -22,7 +22,7 @@ Feature List:
 - Manajemen Profil: Mengelola informasi pribadi pengguna.
 - Sidebar Navigasi: Akses cepat ke Home, Dompet, Transaksi, Analisis, dan Profil.
 
-## 4. Dokumentasi Aplikasi Web
+## 4. Documentation Web Application
 <img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/ade1b3c5-b51d-48f3-a116-e9f3af2e13e5" />
 <img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/a0d9f978-6270-46cc-9c7c-a0d657f3050d" />
 
