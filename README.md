@@ -1,7 +1,7 @@
 # 📑 FINOTE APPLICATION
 
 ## 💰 DESKRIPSI
-**FINOTE APPLICATION** adalah platform manajemen keuangan pribadi yang dirancang untuk membantu pengguna melacak transaksi masuk dan keluar secara efisien. Aplikasi ini hadir dalam dua versi pengembangan: versi **Laravel** dan versi **PHP Native**.
+**FINOTE APPLICATION** adalah platform manajemen keuangan pribadi yang dirancang untuk membantu pengguna melacak transaksi masuk dan keluar secara efisien. Pencatatan keuangan dapat dilihat mulai dari pencatatan harian hingga bulanan.
 
 ## 🎯 TUJUAN
 * Memberikan kemudahan bagi pengguna dalam mencatat riwayat keuangan harian.
@@ -26,5 +26,70 @@
 * `dashboard-finote/` : Proyek utama berbasis framework Laravel.
 * `versi_native/` : Versi aplikasi menggunakan PHP Native murni.
 
-## AUTHOR
+## 📊 UML Diagram
+### 1. Arsitektur Diagram
+Diagram ini menunjukkan interaksi antara Client, Backend Laravel, dan Database.
+```mermaid
+graph TD
+    A[User/Client] -->|HTTP Request| B(Laravel Web Dashboard)
+    A -->|JSON Request| C(Mobile App Native)
+    B -->|REST API| D{Laravel Backend}
+    C -->|REST API| D
+    D -->|Query| E[(MySQL Database)]
+```
+
+### 2. Use Case Diagram
+Diagram ini menunjukkan fungsionalitas utama aplikasi interaksi users dengan sistem.
+```mermaid
+useCaseDiagram
+    actor "Users" as U
+    package "Sistem FINOTE" {
+        usecase "Login / Registrasi" as UC1
+        usecase "Transaction" as UC2
+        usecase "Financial History / Statistik" as UC3
+        usecase "Edit Profile" as UC4
+    }
+    U --> UC1
+    U --> UC2
+    U --> UC3
+    U --> UC4
+```
+
+### 3. Class Diagram
+Struktur data utama yang digunakan untuk mengelola informasi pengguna dan transaksi.
+```mermaid
+classDiagram
+    class User {
+        +int id
+        +string name
+        +string email
+        +login()
+        +register()
+    }
+    class Transaction {
+        +int id
+        +float amount
+        +string category
+        +date created_at
+        +save()
+    }
+    User "1" -- "0..*" Transaction : memiliki
+```
+
+### 4. Sequence Diagram
+Diagram ini menunjukkan urutan proses autentikasi saat pengguna masuk ke aplikasi.
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant S as System/Controller
+    participant D as Database
+
+    U->>S: Input Email & Password
+    S->>D: Validasi Kredensial
+    D-->>S: Data Cocok (Success)
+    S-->>U: Redirect ke Dashboard
+```
+
+
+## DEVELOPER
 Althaf Bilal Jubran
