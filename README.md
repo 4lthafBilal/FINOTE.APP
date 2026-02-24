@@ -22,9 +22,9 @@
 | **Frontend** | Tailwind CSS & Blade Templating |
 | **API Format** | JSON (RESTful API) |
 
-## AUTHOR
-Althaf Bilal Jubran
-
 ## 📁 Struktur Proyek
 * `dashboard-finote/` : Proyek utama berbasis framework Laravel.
 * `versi_native/` : Versi aplikasi menggunakan PHP Native murni.
+
+## AUTHOR
+Althaf Bilal Jubran
