@@ -41,14 +41,16 @@ graph TD
 ### 2. Use Case Diagram
 Diagram ini menunjukkan fungsionalitas utama aplikasi interaksi users dengan sistem.
 ```mermaid
-useCaseDiagram
-    actor "Users" as U
-    package "Sistem FINOTE" {
-        usecase "Login / Registrasi" as UC1
-        usecase "Transaction" as UC2
-        usecase "Financial History / Statistik" as UC3
-        usecase "Edit Profile" as UC4
-    }
+graph LR
+    U((Users))
+    
+    subgraph "Sistem FINOTE"
+        UC1[Login / Registrasi]
+        UC2[Transaction]
+        UC3[Financial History / Statistik]
+        UC4[Edit Profile]
+    end
+    
     U --> UC1
     U --> UC2
     U --> UC3
