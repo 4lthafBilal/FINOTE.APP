@@ -92,6 +92,28 @@ sequenceDiagram
     S-->>U: Redirect ke Dashboard
 ```
 
+## 🎨 MOCK-UP / SCREENSHOTS WEBSITE APPLICATION
+Berikut adalah tampilan antarmuka dari **FINOTE APPLICATION**.
+
+### 1. Login dan Register
+Sistem autentikasi untuk keamanan data pengguna.
+![Login and Register](images/Login%20and%20Register.png)
+
+### 2. Halaman Utama (Home)
+Menampilkan ringkasan saldo dan navigasi utama aplikasi.
+![Halaman Utama](images/Home.png)
+
+### 3. Input Transaksi
+Fitur untuk mencatat data keuangan baru ke dalam sistem.
+![Transaction](images/Transaction.png)
+
+### 4. Riwayat Transaksi
+Daftar seluruh catatan keuangan masuk dan keluar secara mendetail (harian, mingguan, bulanan, total).
+![Riwayat](images/Riwayat.png)
+
+### 5. Profil Pengguna
+Halaman pengaturan informasi dan akun pengguna.
+![Profil](images/Profil.png)
 
 ## DEVELOPER
 Althaf Bilal Jubran
